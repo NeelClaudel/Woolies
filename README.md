@@ -9,5 +9,16 @@ ADMIN -> Can add products, remove products, can manage orders.
 
 #TODO :
 
-Fully Implement USER by adding missing data about billing and shipment addresses
-Implement Updating product from admin dashboard
+- Fully Implement USER by adding missing data about billing and shipment addresses
+- Fully Implement Setting for User where can manage Profil, addresses and Payment options or elses
+- Implement Updating product from admin dashboard -> Manage Products
+- Depend on what product type we sell, update the product prisma model and the front API to fit the needs, also update admin dashboard, frontend product display
+- Implement Auto sending email after purchase to confirm ordering seccesfuly
+- More responsive design
+
+### smaller updates :
+
+- NavBar.tsx = create svg compatible logo instead of actual Text format.
+- NavBar.tsx = Make the design fully responsive
+- Admin/NavBar.tsx = Make the design fully responsive
+- Add posibility to download Orders

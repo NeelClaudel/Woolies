@@ -21,3 +21,7 @@ ADMIN -> Can add products, remove products, can manage orders.
 - NavBar.tsx = Make the design fully responsive
 - Admin/NavBar.tsx = Make the design fully responsive
 - Add posibility to download Orders
+
+# DATABASE :
+
+![database-diagram](./public/database-diagram.svg)

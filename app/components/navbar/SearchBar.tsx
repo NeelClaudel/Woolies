@@ -41,7 +41,7 @@ const SearchBar = () => {
         autoComplete="off"
         type="text"
         {...register("searchTerm")}
-        placeholder="Explore E~Shop"
+        placeholder="Explore Woolies"
         className="p-2
         border
         border-gray-300

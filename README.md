@@ -13,7 +13,7 @@ ADMIN -> Can add products, remove products, can manage orders.
 - Implement Updating product from admin dashboard -> Manage Products
 - Depend on what product type we sell, update the product prisma model and the front API to fit the needs, also update admin dashboard, frontend product display
 - Implement Auto sending email after purchase to confirm ordering seccesfuly
-- More responsive design
+- More responsive design // better UI
 
 ### smaller updates :
 

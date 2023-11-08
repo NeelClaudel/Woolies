@@ -28,6 +28,7 @@ const SelectColor: React.FC<SelectColorProps> = ({
     }
   }, [isProductCreated]);
 
+
   const handleFileChange = useCallback((value: File) => {
     setFile(value);
     addImageToState({ ...item, image: value });

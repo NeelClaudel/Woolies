@@ -37,7 +37,7 @@ export type UploadedImageType = {
 const UpdateProductForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [images, setImages] = useState<ImageType[] | null>();
-  const [isProductCreated, setIsProductCreated] = useState(false);
+  const [isProductCreated, setIsProductUpdated] = useState(false);
   const router = useRouter();
 
   const {
@@ -67,7 +67,7 @@ const UpdateProductForm = () => {
     if (isProductCreated) {
       reset();
       setImages(null);
-      setIsProductCreated(false);
+      setIsProductUpdated(false);
     }
   }, [isProductCreated]);
 
@@ -156,14 +156,15 @@ const UpdateProductForm = () => {
     const productData = { ...data, images: uploadedImages };
 
     axios
-      .post("/api/product", productData)
+      .put(`/api/products/${data.id}`, productData) // Assuming you have the product's ID
       .then(() => {
-        toast.success("Product created");
-        setIsProductCreated(true);
+        toast.success("Product updated successfully");
+        setIsProductUpdated(true);
         router.refresh();
       })
       .catch((error) => {
-        toast.error("Something went wrong when creating a product");
+        console.error("Error updating product:", error);
+        toast.error("Something went wrong when updating the product");
       })
       .finally(() => {
         setIsLoading(false);
@@ -193,7 +194,7 @@ const UpdateProductForm = () => {
 
   return (
     <>
-      <Heading title="Add a Product" center />
+      <Heading title="Update a Product" center />
       <Input
         id="name"
         label="Name"
@@ -278,7 +279,7 @@ const UpdateProductForm = () => {
         </div>
       </div>
       <Button
-        label={isLoading ? "Loading..." : "Add Product"}
+        label={isLoading ? "Updating..." : "Update Product"}
         onClick={handleSubmit(onSubmit)}
       />
     </>

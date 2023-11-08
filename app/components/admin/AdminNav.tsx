@@ -51,6 +51,13 @@ const AdminNav = () => {
               selected={pathname === "/admin/add-products" ? true : false}
             />
           </Link>
+          <Link href="/admin/update-product">
+            <AdminNavItem
+              label="UpdateProduct"
+              icon={MdLibraryAdd}
+              selected={pathname === "/admin/update-product" ? true : false}
+            />
+          </Link>
           <Link href="/admin/manage-products">
             <AdminNavItem
               label="ManageProducts"
